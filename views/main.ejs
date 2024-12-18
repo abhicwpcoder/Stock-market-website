@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-image: url("../images/6227484.jpg");
+            background-size: cover;
+            /* background-color: #E5E5CB; */
+        }
+        .flexBox{
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            text-align: center;
+            gap: 10px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        .container{
+            width: 500px;
+            background-color: rgb(11, 215, 205);
+            box-shadow: 1px 1px 30px #D5CEA3;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+        h1{
+            margin-bottom: 0px;
+        }
+        .p{
+            font-family: serif;
+            font-size: 20px;
+            font-weight: bold;
+            margin: 0px;
+            margin-top: 5px;
+            color: #773903;
+
+        }
+        .mainButton{
+            background-color: rgb(148, 25, 243);
+            height: 40px;
+            width: 150px;
+            border-radius: 20px;
+            border: none;
+            color: #E5E5CB;
+            font-size: 15px;
+            margin-top: -5px;
+            margin-bottom: 10px;
+        }
+        .mainButton:hover{
+            cursor: pointer;
+            background-color: #3C2A21;
+            color: white;
+            border: solid 3px blue;
+        }
+        .style{
+            /* for hover effect */
+            border: 6px solid;
+            border-image: repeating-linear-gradient(135deg,#1A120B 0 10px,#635602 0 20px,#3C2A21 0 30px, #c45c28 0 40px) 8;
+            -webkit-mask: conic-gradient(from 180deg at top 6px right 6px, #0000 90deg,#000 0)
+            var(--_i,200%) 0  /200% var(--_i,6px) border-box no-repeat,
+            conic-gradient(at bottom 6px left  6px,  #0000 90deg,#000 0)
+            0   var(--_i,200%)/var(--_i,6px) 200% border-box no-repeat,
+            linear-gradient(#000 0 0) padding-box no-repeat;
+            transition: .3s, -webkit-mask-position .3s .3s;
+        }
+        .style:hover {
+            --_i: 100%;
+            color: #520007;
+            transition: .3s, -webkit-mask-size .3s .3s;
+        }
+        .title-text{
+            text-align: center;
+            font-family: serif;
+            font-size: 30px;
+            font-weight: bold;
+            margin-top: 70px;
+            color: white;
+            text-shadow: 1px 1px 5px blue;
+        }
+    </style>
+</head>
+<body>
+    <%- include("./partials/header.ejs") %>
+    <p class="title-text">Multiple Stock Exchange Data</p>
+    <div class="flexBox">
+        <% data.forEach(stockData => { %>
+            <div class="container style">
+                <h1> <%= stockData.date %> </h1> <br>
+                <p style="position: absolute; margin-left: 320px; margin-top: -10px; font-style: italic; color: #572d18; font-weight: bold;"><%= stockData.stock %></p> <br>
+                <p class="p">Current Price:- <%= stockData.price %></p> <br>
+                <!-- <%= stockData.extracted_price %> <br> -->
+                <p class="p">Currency of Stock:- <%= stockData.currency %></p> <br>
+                <p style="font-style: italic; color: #572d18; font-weight: bold; margin: 0px;">Last Position:- <%= stockData.price_movement.percentage %>  <%= stockData.price_movement.movement %></p> <br>
+                <a href="<%= stockData.link %>"><button class="mainButton">See More Details</button></a>
+            </div>
+        <% }); %>
+    </div>
+    <!-- Footer -->
+     
+    <footer>
+        <%- include("./partials/footer.ejs") %>
+    </footer>
+</body>
+</html>

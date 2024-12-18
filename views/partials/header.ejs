@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0px;
+            padding: 0px;
+        }
+        .flex-container{
+            width: 100%;
+            display: flex;
+            height: 60px;
+            position: fixed;
+        }
+        @media (max-width: 992px){
+            .flex-container{
+                display: none;
+            }
+        }
+        .flex-item{
+            width: 100%;
+        }
+        img{
+            height: 60px;
+            width: 70px;
+            margin-left: 20px;
+        }
+        .pages{
+            display: flex;
+            margin-left: 35px;
+            margin-top: 25px;
+            gap: 10px;
+            
+        }
+        .button{
+            height: 30px;
+            width: 120px;
+            border: none;
+            color: black;
+            font-size: 18px;
+            font-family: sans-serif;
+            margin-top: -5px;
+            margin-bottom: 10px;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+        .button:hover{
+            cursor: pointer;
+            color: #009578;
+        }
+        .direction{
+            flex-direction: row-reverse;
+            margin-right: 40px;
+            
+        }
+        header{
+            transition: 0.6s;
+        }
+        header.sticky{
+            background: #fff;
+        }
+    </style>
+</head>
+<body>
+    <header class="flex-container sticky">
+        <div class="flex-item">
+            <div class="pages">
+                <a class="button" href="/"> Home </a>
+                <a class="button" href="./about"> About </a>
+                <a class="button" href="./contact"> Contact </a>
+            </div>
+        </div>
+        <div class="flex-item">
+            <div class="pages direction">
+                <a href="/"> <button class="button" style="border: 2px solid blueviolet; border-radius: 5px;"> Sign Up </button> </a>
+                <a href="/"> <button class="button" style="flex-direction: row-reverse; border: 2px solid blueviolet; border-radius: 5px;">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" style="height: 13px; width: 15px; color : hsl(243, 97%, 68%); "><path d="M304 128a80 80 0 1 0 -160 0 80 80 0 1 0 160 0zM96 128a128 128 0 1 1 256 0A128 128 0 1 1 96 128zM49.3 464l349.5 0c-8.9-63.3-63.3-112-129-112l-91.4 0c-65.7 0-120.1 48.7-129 112zM0 482.3C0 383.8 79.8 304 178.3 304l91.4 0C368.2 304 448 383.8 448 482.3c0 16.4-13.3 29.7-29.7 29.7L29.7 512C13.3 512 0 498.7 0 482.3z"/></svg>
+                    Log In </button> </a>
+            </div>
+        </div>
+    </header>
+    <script>
+        window.addEventListener("scroll", function(){
+        var header = this.document.querySelector("header");
+        header.classList.toggle("sticky", this.window.scrollY > 0);
+    });
+    </script>
+</body>
+</html>

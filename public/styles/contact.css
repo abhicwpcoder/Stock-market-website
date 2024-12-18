@@ -1,0 +1,126 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: hsl(212, 79%, 91%);
+    background-position: center;
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+}
+
+#contact-form input,
+#contact-form textarea {
+    height: 40px;
+    width: 90%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 20px;
+}
+.button {
+    background-color: #773903;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    
+}
+.button:hover{
+    color: #000;
+    background-color: rgb(226, 232, 216);
+    border: solid 2px black;
+}
+#contact-form button{
+    height: 60px;
+    font-weight: bold;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+.style{
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    font-family: serif;
+}
+h2{
+    margin: auto;
+    color: #1A120B;
+    font-size: 30px;
+    margin-left: 20px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+p{
+    font-size: 25px;
+    font-style: italic;
+    color: #000;
+    text-shadow: 1px 1px 1px #f5adbf;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.contact{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 100px;
+    text-align: center;
+}
+
+@media (max-width: 900px){
+    .contact   {
+        display: flex;
+        flex-direction: column;
+    }
+}
+.item{
+    margin: 10px;
+}
+@media (max-width:900px){
+    .item{
+        text-align: center;
+    }
+}
+input:hover{
+    box-shadow: #3C2A21 0px 0px 30px;
+}
+textarea:hover{
+    box-shadow: #3C2A21 0px 0px 30px;
+}
+
+/* footer */
+
+#footer{
+    display: flex;
+}
+.footer-item{  
+    width: 100%;
+    margin: 10px 10px;
+    text-align: center;
+}
+
+.footer-item p{
+    margin-left: 10px;
+    font-size: 20px;
+    color: #000;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.footer-item button {
+    height: 40px;
+    width: 70px;
+    border-radius: 10px;
+    font-size: 15px;
+    background-color: rgb(4, 213, 147);
+    text-decoration: none;
+}
+.footer-item a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+.footer-item a:hover {
+    color: #000;
+}
+.footer-item button:hover{
+    background-color: rgb(91, 212, 239);
+    border: solid 3px #000;
+}

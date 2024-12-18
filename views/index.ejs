@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            height: 100vh;
+            background-color: hsl(212, 79%, 91%);
+            scroll-behavior: smooth;
+        }
+        .flexBox{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            gap: 15px;
+            font-family: 'Times New Roman', Times, serif;
+            background-size: cover;
+        }
+        .input{
+            height: 55px;
+            width: 300px;
+            background-color: azure;
+            border-radius: 5px;
+            font-size: larger;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .input:hover{
+            box-shadow: 0px 0px 10px orange;
+            background-color:rgb(234, 241, 227);
+        }
+        .submit{
+            height: 40px;
+            width: 200px;
+            font-size: larger;
+            font-family: sans-serif;
+            background-color: rgb(159, 236, 211);
+            margin-left: 50px;
+            transition: background-color 0.8s ease-in-out;
+        }
+        .submit:hover{
+            background-color: rgb(91, 212, 239);
+        }
+    </style>
+</head>
+<body>
+    <%- include("partials/header.ejs") %>
+    <div class="flexBox">
+        <p style="font-family:'Times New Roman', Times, serif; font-size: xx-large; font-weight: bold; margin-bottom: 0px;">TradeBull
+            <svg xmlns="http://www.w3.org/2000/svg" style="height: 20px;" viewBox="0 0 700 512">
+                <path fill="#00ff7b" d="M576 0c17.7 0 32 14.3 32 32l0 448c0 17.7-14.3 32-32 32s-32-14.3-32-32l0-448c0-17.7 14.3-32 32-32zM448 96c17.7 0 32 14.3 32 32l0 352c0 17.7-14.3 32-32 32s-32-14.3-32-32l0-352c0-17.7 14.3-32 32-32zM352 224l0 256c0 17.7-14.3 32-32 32s-32-14.3-32-32l0-256c0-17.7 14.3-32 32-32s32 14.3 32 32zM192 288c17.7 0 32 14.3 32 32l0 160c0 17.7-14.3 32-32 32s-32-14.3-32-32l0-160c0-17.7 14.3-32 32-32zM96 416l0 64c0 17.7-14.3 32-32 32s-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32s32 14.3 32 32z"/>
+            </svg></p>
+        <p> Stock market analysis platform for investors and traders.</p>
+        <form action="/submit" method="POST">
+            <input class="input" type="text" name="companyName" placeholder="Enter Stock Name"> <br>
+            <input class="submit" type="submit" value="Submit">
+        </form>
+    </div>
+    <%- include("partials/footer.ejs") %>
+</body>
+</html>
