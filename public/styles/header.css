@@ -1,32 +1,20 @@
-body{
-    margin: 0px;
-    padding: 0px;
-}
 .flex-container{
     width: 100%;
     display: flex;
     height: 60px;
     position: fixed;
 }
-@media only screen and (max-width: 769px){
-    .flex-container{
-        display: none;
-    }
-}
 .flex-item{
     width: 100%;
 }
-img{
-    height: 60px;
-    width: 70px;
-    margin-left: 20px;
-}
-.pages{
-    display: flex;
-    margin-left: 35px;
-    margin-top: 25px;
-    gap: 10px;
+.direction{
+    flex-direction: row-reverse;
+    margin-right: 40px;
     
+}
+.button:hover{
+    cursor: pointer;
+    color: #009578;
 }
 .button{
     height: 30px;
@@ -40,18 +28,75 @@ img{
     text-decoration: none;
     text-transform: uppercase;
 }
-.button:hover{
-    cursor: pointer;
-    color: #009578;
-}
-.direction{
-    flex-direction: row-reverse;
-    margin-right: 40px;
+.pages{
+    display: flex;
+    margin-left: 35px;
+    margin-top: 25px;
+    gap: 10px;
     
 }
-header{
-    transition: 0.6s;
+
+.nav {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 55px;
+    box-shadow: 0 0 3px rgba(0,0,0,0.2);
+    background-color: #ffffff;
+    overflow-x: auto;
+    display: none; /* Hide by default */
 }
-header.sticky{
-    background: #fff;
+
+@media screen and (max-width: 769px) {
+    .nav {
+        display: flex; /* Show for tablet and mobile */
+    }
+}
+
+.nav-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1;
+    min-width: 50px;
+    overflow: hidden;
+    white-space: nowrap;
+    font-family: sans-serif;
+    font-size: 14px;
+    color: #444444;
+    margin-top: 10px;
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+    transition: background-color 0.1s ease-in-out;
+}
+
+.nav-link:hover {
+    color: #009578;
+}
+
+.nav-icon {
+    font-size: 18px;
+}
+
+/* Add specific CSS for mobile and tablet views */
+@media (max-width: 769px) {
+    .header-nav {
+        display: none; /* Hide original navigation */
+    }
+    .nav {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 60px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        background-color: #fff;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 999;
+    }
+    .nav-link {
+        text-align: center;
+    }
 }
