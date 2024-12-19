@@ -8,7 +8,7 @@ body{
     height: 60px;
     position: fixed;
 }
-@media (max-width: 769px){
+@media only screen and (max-width: 769px){
     .flex-container{
         display: none;
     }

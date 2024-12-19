@@ -21,12 +21,6 @@ body{
     text-align: center;
     margin-bottom: 30px;
 }
-@media screen and (max-width: 769px) {
-    .input{
-        height: 85px;
-        width: 500px;
-    }
-}
 .input:hover{
     box-shadow: 0px 0px 10px orange;
     background-color:rgb(234, 241, 227);
@@ -39,12 +33,6 @@ body{
     background-color: rgb(159, 236, 211);
     margin-left: 50px;
     transition: background-color 0.8s ease-in-out;
-}
-@media screen and (max-width: 769px) {
-    .submit{
-        height: 70px;
-        width: 400px;
-    }
 }
 .submit:hover{
     background-color: rgb(91, 212, 239);
