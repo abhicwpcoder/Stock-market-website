@@ -5,6 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="styles/main.css">
+    <style>
+        footer{
+            display: none;
+        }
+        @media only screen and (max-width: 1026px) {
+            footer{
+                display: block;
+            }
+        }
+    </style>
 </head>
 <body>
     <%- include("./partials/header.ejs") %>
@@ -24,7 +34,7 @@
     </div>
     <!-- Footer -->
      
-    <footer>
+    <footer class="invisible">
         <%- include("./partials/footer.ejs") %>
     </footer>
 </body>

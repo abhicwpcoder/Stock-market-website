@@ -35,7 +35,8 @@ app.post('/submit', async (req, res) => {
         const d = new Date();
         const date = d.getFullYear();
         console.log(date);
-        res.render("main", {data: response.data.futures_chain, date: date});
+        const exchangeLength = response.data.futures_chain.length;
+        res.render("main", {data: response.data.futures_chain, date: date , exchangeLength: exchangeLength});
         console.log(response.data.futures_chain);
     } catch (error) {
         res.status(500).json({ error: 'Failed to fetch data' });
