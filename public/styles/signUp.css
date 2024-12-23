@@ -1,0 +1,35 @@
+.align{
+    margin-top: 150px;
+    background-color: hsl(212, 79%, 91%);
+    scroll-behavior: smooth;
+
+}
+@media only screen and (max-width: 426px) {
+    .align{
+        margin-top: 50px;
+        margin-bottom: 70px;
+    }
+}
+.row{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+
+}
+.g-3{
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+}
+.col-md-4{
+    align-items: center;
+    font-weight: bold;
+    background-color: aquamarine;
+}
+.sub-button{
+    display: flex;
+    justify-content: center;
+}
+.btn:hover{
+    background-color: rgb(133, 2, 214);
+}
