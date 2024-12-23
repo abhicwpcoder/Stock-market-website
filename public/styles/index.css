@@ -11,7 +11,6 @@ body{
     gap: 15px;
     font-family: 'Times New Roman', Times, serif;
 }
-
 .input{
     height: 55px;
     width: 300px;
@@ -21,6 +20,7 @@ body{
     text-align: center;
     margin-bottom: 30px;
 }
+
 .input:hover{
     box-shadow: 0px 0px 10px orange;
     background-color:rgb(234, 241, 227);
@@ -34,6 +34,7 @@ body{
     margin-left: 50px;
     transition: background-color 0.8s ease-in-out;
 }
+
 .submit:hover{
     background-color: rgb(91, 212, 239);
 }

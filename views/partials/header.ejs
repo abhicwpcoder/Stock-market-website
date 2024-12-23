@@ -7,8 +7,6 @@
     <link rel="stylesheet" href="/styles/header.css">
 </head>
 <body>
-
-    <!-- Desktop Navigation (hidden on mobile/tablet) -->
     <header class="flex-container header-nav">
         <div class="flex-item">
             <div class="pages">
@@ -53,6 +51,11 @@
             </svg>New
         </a>
     </nav>
-
+    <script>
+        window.addEventListener("scroll", function(){
+        var header = this.document.querySelector("header");
+        header.classList.toggle("sticky", this.window.scrollY > 0);
+    });
+    </script>
 </body>
 </html>

@@ -1,0 +1,49 @@
+body{
+    background-color: hsl(212, 79%, 91%);
+}
+.f-container{
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+}
+.f-item{
+    width: 500px;
+    font-family: serif;
+    font-size: larger;
+    font-weight: bold;
+    background-color: whitesmoke;
+    padding: 30px;
+}
+.mainButton{
+    background-color: rgb(4, 213, 147);
+    height: 40px;
+    width: 145px;
+    border-radius: 3%;
+    border: none;
+    color: #000;
+    font-size: 17px;
+    margin-top: -5px;
+    margin-bottom: 10px;
+}
+.mainButton:hover{
+    cursor: pointer;
+    background-color: rgb(91, 212, 239);
+    color: white;
+    border: solid 3px blue;
+}
+.style{
+    /* for hover effect */
+    border: 6px solid;
+    border-image: repeating-linear-gradient(135deg,#d2e334 0 10px,#01ee8b 0 20px,#0af9f9 0 30px, #8847f1 0 40px) 8;
+    -webkit-mask: conic-gradient(from 180deg at top 6px right 6px, #0000 90deg,#000 0)
+    var(--_i,200%) 0  /200% var(--_i,6px) border-box no-repeat,
+    conic-gradient(at bottom 6px left  6px,  #0000 90deg,#000 0)
+    0   var(--_i,200%)/var(--_i,6px) 200% border-box no-repeat,
+    linear-gradient(#000 0 0) padding-box no-repeat;
+    transition: .3s, -webkit-mask-position .3s .3s;
+}
+.style:hover {
+    --_i: 100%;
+    color: #520007;
+    transition: .3s, -webkit-mask-size .3s .3s;
+}

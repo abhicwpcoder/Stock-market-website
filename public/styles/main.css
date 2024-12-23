@@ -1,0 +1,103 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    background-color: hsl(212, 79%, 91%);
+    scroll-behavior: smooth;
+}
+.flexBox{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+    gap: 10px;
+    font-family: 'Times New Roman', Times, serif;
+}
+.container{
+    width: 500px;
+    background-color: rgb(69, 235, 227);
+    box-shadow: 1px 1px 30px #D5CEA3;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+h1{
+    margin-bottom: 0px;
+}
+.p{
+    font-family: serif;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0px;
+    margin-top: 5px;
+    color: #773903;
+}
+
+.exchange-name{
+    position: absolute;
+    margin-left: 320px;
+    margin-top: -10px;
+    font-style: italic;
+    color: #572d18;
+    font-weight: bold;
+}
+@media only screen and (max-width: 426px) {
+    .exchange-name{
+        margin-left: 250px;
+    }
+}
+@media only screen and (max-width: 376px) {
+    .exchange-name{
+        margin-left: 200px;
+    }
+}
+@media only screen and (max-width: 321px) {
+    .exchange-name{
+        margin-left: 150px;
+    }
+}
+.mainButton{
+    background-color: rgb(98, 39, 144);
+    height: 40px;
+    width: 150px;
+    border-radius: 20px;
+    border: none;
+    color: #E5E5CB;
+    font-size: 15px;
+    margin-top: -5px;
+    margin-bottom: 10px;
+}
+.mainButton:hover{
+    cursor: pointer;
+    background-color: #3C2A21;
+    color: white;
+    border: solid 3px blue;
+}
+.style{
+    /* for hover effect */
+    border: 6px solid;
+    border-image: repeating-linear-gradient(135deg,#d2e334 0 10px,#01ee8b 0 20px,#0af9f9 0 30px, #8847f1 0 40px) 8;
+    -webkit-mask: conic-gradient(from 180deg at top 6px right 6px, #0000 90deg,#000 0)
+    var(--_i,200%) 0  /200% var(--_i,6px) border-box no-repeat,
+    conic-gradient(at bottom 6px left  6px,  #0000 90deg,#000 0)
+    0   var(--_i,200%)/var(--_i,6px) 200% border-box no-repeat,
+    linear-gradient(#000 0 0) padding-box no-repeat;
+    transition: .3s, -webkit-mask-position .3s .3s;
+}
+.style:hover {
+    --_i: 100%;
+    color: #520007;
+    transition: .3s, -webkit-mask-size .3s .3s;
+}
+.title-text{
+    text-align: center;
+    font-family: serif;
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 70px;
+    color: #000;
+    text-shadow: 0px 0px 2px blue;
+}
+@media only screen and (max-width: 769px) {
+    .title-text{
+        margin-top: 20px;
+    }
+}
